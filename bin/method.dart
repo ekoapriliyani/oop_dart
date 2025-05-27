@@ -2,6 +2,19 @@ class Person {
   String name = "Guest";
   String? address;
   final String country = "Indonesia";
+
+  // method
+  void sayHello(String paramName) {
+    print("Hello $paramName, my name is $name");
+  }
+
+  void hello() {
+    print("hello, my name is $name");
+  }
+
+  String getName() {
+    return "Hello, my name is $name";
+  }
 }
 
 void main() {
@@ -21,4 +34,8 @@ void main() {
   // cara membuat object juga. lebih simple
   Person person2 = Person();
   print(person2);
+
+  // memanggil object
+  person1.sayHello("April");
+  person1.hello();
 }
