@@ -8,4 +8,8 @@ void main() {
   print(
     category1 == category2,
   ); // jika ingin true harus kita override dulu operator == nya yg ada di class Category
+
+  // pastikan override operator dibarengin dengan hashcodenya
+  print(category1.hashCode);
+  print(category2.hashCode);
 }
