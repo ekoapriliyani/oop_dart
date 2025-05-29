@@ -6,8 +6,16 @@ class Car {
   }
 }
 
-class Avanza implements Car {
+// jika kita menggunakan interface, umumnya class dikasih abstract
+
+abstract class HasBrand {
+  String getBrand();
+}
+
+// implementasi interface bisa lebih dari 1 class
+class Avanza implements Car, HasBrand {
   String name = 'Avanza';
+  String getBrand() => "Toyota";
   void drive() {
     print('Avanza is running');
   }
